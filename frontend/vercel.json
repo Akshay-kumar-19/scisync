@@ -1,13 +1,13 @@
 {
   "cleanUrls": true,
   "rewrites": [
-    { "source": "/", "destination": "/html/login.html" },
-    { "source": "/login", "destination": "/html/login.html" },
-    { "source": "/dashboard", "destination": "/html/dashboard.html" },
-    { "source": "/insert", "destination": "/html/insert.html" },
-    { "source": "/update", "destination": "/html/update.html" },
-    { "source": "/delete", "destination": "/html/delete.html" },
-    { "source": "/queries", "destination": "/html/queries.html" },
-    { "source": "/projects", "destination": "/html/projects.html" }
+    { "source": "/", "destination": "/html/login" },
+    { "source": "/login", "destination": "/html/login" },
+    { "source": "/dashboard", "destination": "/html/dashboard" },
+    { "source": "/insert", "destination": "/html/insert" },
+    { "source": "/update", "destination": "/html/update" },
+    { "source": "/delete", "destination": "/html/delete" },
+    { "source": "/queries", "destination": "/html/queries" },
+    { "source": "/projects", "destination": "/html/projects" }
   ]
 }
