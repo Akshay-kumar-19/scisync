@@ -5,6 +5,6 @@
     const configuredApiBase = window.__SCISYNC_API_BASE__ || storedApiBase;
 
     window.SCISYNC_CONFIG = {
-        API_BASE: configuredApiBase || (isLocal ? "http://127.0.0.1:5000" : "https://replace-with-your-backend-url.vercel.app")
+        API_BASE: configuredApiBase || (isLocal ? "http://127.0.0.1:5000" : "https://scisync.vercel.app")
     };
 })();
