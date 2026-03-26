@@ -1,4 +1,6 @@
-const API_BASE = localStorage.getItem("scienceFairApiBase") || "http://127.0.0.1:5000";
+const API_BASE = (window.SCISYNC_CONFIG && window.SCISYNC_CONFIG.API_BASE)
+    || localStorage.getItem("scienceFairApiBase")
+    || "http://127.0.0.1:5000";
 
 function setStatus(message, type = "") {
     const element = document.getElementById("auth-status");
