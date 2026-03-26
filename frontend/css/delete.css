@@ -1,0 +1,26 @@
+@import 'insert.css';
+
+/* Inherits from insert.css */
+
+.delete-warning {
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    color: #991b1b;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.delete-btn {
+    background: var(--error-color) !important;
+    color: white !important;
+}
+
+.delete-btn:hover {
+    background: #dc2626 !important;
+    border-color: #dc2626 !important;
+}

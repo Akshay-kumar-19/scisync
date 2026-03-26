@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert Data</title>
+    <link rel="icon" type="image/svg+xml" href="../assets/scisync-icon.svg">
+    <link rel="stylesheet" href="../css/insert.css">
+</head>
+<body data-protected="true">
+
+<div class="container">
+    <div class="sidebar">
+        <div class="brand-wordmark">
+            <div class="brand-mark"><img src="../assets/scisync-icon.svg" alt="SciSync logo"></div>
+            <h2>SciSync</h2>
+        </div>
+        <p class="subtitle">Exhibition Control Panel</p>
+
+        <ul>
+            <li onclick="location.href='dashboard.html'">Dashboard</li>
+            <li onclick="location.href='insert.html'">Insert</li>
+            <li onclick="location.href='update.html'">Update</li>
+            <li onclick="location.href='delete.html'">Delete</li>
+            <li onclick="location.href='queries.html'">Queries</li>
+        </ul>
+
+        <button class="logout" onclick="logout()">Logout</button>
+    </div>
+
+    <div class="content">
+        <div class="page-topbar">
+            <div class="title-stack">
+                <div class="app-badge"><img src="../assets/scisync-icon.svg" alt="SciSync icon"></div>
+                <div class="title-copy">
+                    <span class="eyebrow">SciSync</span>
+                    <h1>Insert Data</h1>
+                </div>
+            </div>
+            <div class="search-shell">
+                <span class="search-label">SciSync data entry workspace</span>
+            </div>
+        </div>
+
+        <div class="insert-buttons">
+            <button onclick="showForm('student')">Insert Student</button>
+            <button onclick="showForm('project')">Insert Project</button>
+            <button onclick="showForm('mentor')">Insert Mentor</button>
+            <button onclick="showForm('school')">Insert School</button>
+            <button onclick="showForm('award')">Insert Award</button>
+            <button onclick="showForm('visitor')">Insert Visitor</button>
+            <button onclick="showForm('judge')">Insert Judge Score</button>
+            <button onclick="showForm('vrating')">Insert Visitor Rating</button>
+        </div>
+
+        <div id="form-area"></div>
+    </div>
+</div>
+
+<script src="../js/auth.js"></script>
+<script src="../js/insert.js"></script>
+
+</body>
+</html>

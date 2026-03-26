@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queries</title>
+    <link rel="icon" type="image/svg+xml" href="../assets/scisync-icon.svg">
+    <link rel="stylesheet" href="../css/queries.css">
+</head>
+<body data-protected="true">
+
+<div class="container">
+    <div class="sidebar">
+        <div class="brand-wordmark">
+            <div class="brand-mark"><img src="../assets/scisync-icon.svg" alt="SciSync logo"></div>
+            <h2>SciSync</h2>
+        </div>
+        <p class="subtitle">Exhibition Control Panel</p>
+
+        <ul>
+            <li onclick="location.href='dashboard.html'">Dashboard</li>
+            <li onclick="location.href='insert.html'">Insert</li>
+            <li onclick="location.href='update.html'">Update</li>
+            <li onclick="location.href='delete.html'">Delete</li>
+            <li onclick="location.href='queries.html'">Queries</li>
+        </ul>
+
+        <button class="logout" onclick="logout()">Logout</button>
+    </div>
+
+    <div class="content">
+        <div class="page-topbar">
+            <div class="title-stack">
+                <div class="app-badge"><img src="../assets/scisync-icon.svg" alt="SciSync icon"></div>
+                <div class="title-copy">
+                    <span class="eyebrow">SciSync</span>
+                    <h1>Queries</h1>
+                </div>
+            </div>
+            <div class="search-shell">
+                <span class="search-label">SciSync reporting and insights</span>
+            </div>
+        </div>
+
+        <div class="queries-list">
+            <button onclick="loadQuery1()">1. Projects by Theme</button>
+            <button onclick="runQuery(2)">2. School with Most Awards</button>
+            <button onclick="runQuery(3)">3. Mentors with >3 Projects</button>
+            <button onclick="runQuery(4)">4. Avg Judge Score per Theme</button>
+            <button onclick="runQuery(5)">5. Projects Winning 2 Awards</button>
+            <button onclick="runQuery(6)">6. Projects with Multiple Mentors</button>
+            <button onclick="loadQuery7()">7. Schools in All Themes</button>
+            <button onclick="loadQuery8()">8. Visitors Feedback Count</button>
+            <button onclick="loadQuery9()">9. Projects with >9 Ratings</button>
+            <button onclick="runQuery(10)">10. Most Common Winning Theme</button>
+            <button onclick="runQuery(11)">11. Highest Combined Score</button>
+            <button onclick="runQuery(12)">12. Schools Without Awards</button>
+        </div>
+
+        <div id="query-area"></div>
+    </div>
+</div>
+
+<script src="../js/auth.js"></script>
+<script src="../js/queries.js"></script>
+
+</body>
+</html>

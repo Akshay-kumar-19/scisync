@@ -1,0 +1,110 @@
+:root {
+    --primary-color: #0f766e;
+    --primary-hover: #115e59;
+    --secondary-color: #52606d;
+    --accent-color: #ea580c;
+    --background-color: #f3f7f6;
+    --card-bg: rgba(255, 255, 255, 0.92);
+    --text-primary: #102a43;
+    --text-secondary: #486581;
+    --border-color: #d9e2ec;
+    --success-color: #15803d;
+    --error-color: #dc2626;
+    --sidebar-bg: linear-gradient(180deg, #0b3c49 0%, #124559 100%);
+    --sidebar-text: #e0fbfc;
+    --font-family: "Segoe UI", "Noto Sans", system-ui, sans-serif;
+    --font-size-base: 16px;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.5rem;
+    --font-size-2xl: 2rem;
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 0.75rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    --border-radius: 16px;
+    --shadow-sm: 0 10px 30px rgb(15 23 42 / 0.06);
+    --shadow-md: 0 18px 40px rgb(15 23 42 / 0.12);
+    --shadow-lg: 0 28px 60px rgb(15 23 42 / 0.18);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background:
+        radial-gradient(circle at top left, rgba(15, 118, 110, 0.12), transparent 32%),
+        radial-gradient(circle at bottom right, rgba(234, 88, 12, 0.1), transparent 28%),
+        var(--background-color);
+    color: var(--text-primary);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+}
+
+button {
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.2s ease;
+}
+
+input,
+select,
+textarea {
+    font-family: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+    transition: all 0.2s ease;
+}
+
+/* Glass Table Styles */
+.glass-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 1rem;
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+    table-layout: auto;
+}
+
+.glass-table th {
+    background: #f8fafc;
+    color: var(--text-secondary);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    padding: 1rem 1.5rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.glass-table td {
+    padding: 1rem 1.5rem;
+    color: var(--text-primary);
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 0.95rem;
+    transition: background 0.2s;
+    vertical-align: top;
+    word-break: break-word;
+}
+
+.glass-table tr:last-child td {
+    border-bottom: none;
+}
+
+.glass-table tr:hover td {
+    background: #f8fafc;
+}

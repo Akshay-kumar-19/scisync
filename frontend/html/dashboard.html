@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="icon" type="image/svg+xml" href="../assets/scisync-icon.svg">
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body data-protected="true">
+
+<div class="container">
+    <div class="sidebar">
+        <div class="brand-wordmark">
+            <div class="brand-mark"><img src="../assets/scisync-icon.svg" alt="SciSync logo"></div>
+            <h2>SciSync</h2>
+        </div>
+        <p class="subtitle">Exhibition Control Panel</p>
+
+        <ul>
+            <li onclick="location.href='dashboard.html'">Dashboard</li>
+            <li onclick="viewData('students')">Students</li>
+            <li onclick="viewData('projects')">Projects</li>
+            <li onclick="viewData('mentors')">Mentors</li>
+            <li onclick="viewData('schools')">Schools</li>
+            <li onclick="viewData('awards')">Awards</li>
+            <li onclick="viewData('visitors')">Visitors</li>
+            <li onclick="location.href='queries.html'">Queries</li>
+        </ul>
+
+        <button class="logout" onclick="logout()">Logout</button>
+    </div>
+
+    <div class="content">
+        <div class="page-topbar">
+            <div class="title-stack">
+                <div class="app-badge"><img src="../assets/scisync-icon.svg" alt="SciSync icon"></div>
+                <div class="title-copy">
+                    <span class="eyebrow">SciSync</span>
+                    <h1>Dashboard</h1>
+                </div>
+            </div>
+            <div class="search-shell">
+                <span class="search-label">SciSync workspace and quick access</span>
+            </div>
+        </div>
+
+        <div class="dashboard-buttons">
+            <button onclick="location.href='insert.html'">Insert Data</button>
+            <button onclick="location.href='update.html'">Update Data</button>
+            <button onclick="location.href='delete.html'">Delete Data</button>
+        </div>
+
+        <div id="view-area">
+            <div class="empty-state">Select a section from the sidebar to load data.</div>
+        </div>
+    </div>
+</div>
+
+<script src="../js/auth.js"></script>
+<script src="../js/dashboard.js"></script>
+</body>
+</html>

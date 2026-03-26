@@ -1,0 +1,21 @@
+@import 'insert.css';
+
+/* Inherits everything from insert.css as the layout is identical */
+/* Adding specific styles for update if needed */
+
+.update-search-box {
+    background: #f1f5f9;
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    border: 1px solid var(--border-color);
+}
+
+.update-search-box h3 {
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.update-search-box input {
+    background: white !important;
+}

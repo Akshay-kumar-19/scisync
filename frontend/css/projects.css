@@ -1,0 +1,4 @@
+@import 'view.css';
+
+/* Specific styles for project view if needed */
+/* Currently inheriting from view.css which handles tables */

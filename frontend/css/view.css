@@ -1,0 +1,49 @@
+@import 'dashboard.css';
+
+/* Glass Table Styles */
+.glass-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-top: 1rem;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+}
+
+.glass-table th {
+  background: #f8fafc;
+  color: var(--text-secondary);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  padding: 1rem 1.5rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.glass-table td {
+  padding: 1rem 1.5rem;
+  color: var(--text-primary);
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 0.95rem;
+  transition: background 0.2s;
+}
+
+.glass-table tr:last-child td {
+  border-bottom: none;
+}
+
+.glass-table tr:hover td {
+  background: #f8fafc;
+}
+
+#section-title {
+  font-size: 2rem;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}

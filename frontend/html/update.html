@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Data</title>
+    <link rel="icon" type="image/svg+xml" href="../assets/scisync-icon.svg">
+    <link rel="stylesheet" href="../css/update.css">
+</head>
+<body data-protected="true">
+
+<div class="container">
+    <div class="sidebar">
+        <div class="brand-wordmark">
+            <div class="brand-mark"><img src="../assets/scisync-icon.svg" alt="SciSync logo"></div>
+            <h2>SciSync</h2>
+        </div>
+        <p class="subtitle">Exhibition Control Panel</p>
+
+        <ul>
+            <li onclick="location.href='dashboard.html'">Dashboard</li>
+            <li onclick="location.href='insert.html'">Insert</li>
+            <li onclick="location.href='update.html'">Update</li>
+            <li onclick="location.href='delete.html'">Delete</li>
+            <li onclick="location.href='queries.html'">Queries</li>
+        </ul>
+
+        <button class="logout" onclick="logout()">Logout</button>
+    </div>
+
+    <div class="content">
+        <div class="page-topbar">
+            <div class="title-stack">
+                <div class="app-badge"><img src="../assets/scisync-icon.svg" alt="SciSync icon"></div>
+                <div class="title-copy">
+                    <span class="eyebrow">SciSync</span>
+                    <h1>Update Data</h1>
+                </div>
+            </div>
+            <div class="search-shell">
+                <span class="search-label">SciSync editing and correction space</span>
+            </div>
+        </div>
+
+        <div class="update-buttons">
+            <button onclick="loadForm('student')">Update Student</button>
+            <button onclick="loadForm('project')">Update Project</button>
+            <button onclick="loadForm('mentor')">Update Mentor</button>
+            <button onclick="loadForm('school')">Update School</button>
+            <button onclick="loadForm('award')">Update Award</button>
+            <button onclick="loadForm('visitor')">Update Visitor</button>
+        </div>
+
+        <div id="update-area"></div>
+    </div>
+</div>
+
+<script src="../js/auth.js"></script>
+<script src="../js/update.js"></script>
+
+</body>
+</html>

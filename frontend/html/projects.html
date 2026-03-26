@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Project Manager</title>
+  <link rel="stylesheet" href="../css/projects.css" />
+</head>
+<body data-protected="true">
+
+<div class="container">
+
+  <h1>Project Management</h1>
+
+  <div class="tabs">
+    <button class="tab active" onclick="openTab(event, 'insertTab')">Insert</button>
+    <button class="tab" onclick="openTab(event, 'updateTab')">Update</button>
+    <button class="tab" onclick="openTab(event, 'deleteTab')">Delete</button>
+  </div>
+
+  <!-- INSERT -->
+  <div class="tabContent" id="insertTab">
+    <h2>Insert Project</h2>
+
+    <input type="text" id="projectTitle" placeholder="Project Title">
+
+    <select id="schoolDropdown">
+      <option value="">Select School</option>
+    </select>
+
+    <select id="mentorDropdown" multiple>
+      <option value="">Select Mentor(s)</option>
+    </select>
+
+    <input type="text" id="theme" placeholder="Theme">
+
+    <button onclick="insertProject()">Insert</button>
+  </div>
+
+  <!-- UPDATE -->
+  <div class="tabContent" id="updateTab" style="display:none;">
+    <h2>Update Project</h2>
+
+    <select id="projectDropdownUpdate"></select>
+
+    <input type="text" id="updateTitle" placeholder="New Title">
+    <input type="text" id="updateTheme" placeholder="New Theme">
+
+    <button onclick="updateProject()">Update</button>
+  </div>
+
+  <!-- DELETE -->
+  <div class="tabContent" id="deleteTab" style="display:none;">
+    <h2>Delete Project</h2>
+    <select id="projectDropdownDelete"></select>
+    <button class="deleteBtn" onclick="deleteProject()">Delete</button>
+  </div>
+
+</div>
+
+<script src="../js/auth.js"></script>
+<script src="../js/projects.js"></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+@import 'dashboard.css';
+
+.queries-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.queries-list button {
+    padding: 1.25rem;
+    background: linear-gradient(180deg, #ffffff, #f8fbfb);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    text-align: left;
+    font-size: 0.95rem;
+    font-weight: 700;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.queries-list button:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    background: #eff6ff;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.queries-list button::after {
+    content: '->';
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.2s;
+}
+
+.queries-list button:hover::after {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+#query-area {
+    background: var(--card-bg);
+    backdrop-filter: blur(12px);
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-color);
+    min-height: 200px;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+#query-area h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+#query-area label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+    margin-top: 1rem;
+}
+
+#query-area input,
+#query-area select {
+    width: 100%;
+    max-width: 400px;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.run-btn {
+    background: linear-gradient(135deg, var(--accent-color), #f97316);
+    color: white;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 12px;
+    margin-top: 1rem;
+    font-weight: 700;
+}
+
+.run-btn:hover {
+    background: #0284c7;
+}
