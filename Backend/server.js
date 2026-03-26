@@ -1,8 +1,8 @@
 require("dotenv").config();
 const express = require("express");
-const mongoose = require("mongoose");
 const cors = require("cors");
 const { requireAuth } = require("./middleware/auth");
+const { connectToDatabase } = require("./lib/db");
 
 const app = express();
 app.use(express.json());
@@ -16,15 +16,19 @@ app.use((req, res, next) => {
   next();
 });
 
-// MongoDB Connection
-mongoose
-  .connect(process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/science_exhibition")
-  .then(() => console.log("MongoDB Connected"))
-  .catch(err => console.log("DB Error:", err));
+app.use(async (req, res, next) => {
+  try {
+    await connectToDatabase();
+    next();
+  } catch (error) {
+    console.log("DB Error:", error);
+    res.status(500).json({ success: false, message: "Database connection failed" });
+  }
+});
 
 // Basic check
 app.get("/", (req, res) => {
-  res.send("Science Exhibition Backend Running...");
+  res.send("SciSync backend is running.");
 });
 
 // ROUTES
